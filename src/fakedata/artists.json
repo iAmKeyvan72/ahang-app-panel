@@ -1,0 +1,97 @@
+[
+  {
+    "artistId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "name": {
+      "english": "string",
+      "farsi": "string"
+    },
+    "image": {
+      "rawImage": "string",
+      "brandedImage": "string"
+    },
+    "description": "string",
+    "singles": [
+      {
+        "trackId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "title": {
+          "english": "string",
+          "farsi": "string"
+        },
+        "releaseYear": 0,
+        "cover": {
+          "rawImage": "string",
+          "brandedImage": "string"
+        },
+        "description": "string",
+        "lyricsText": "string",
+        "durationInSeconds": 0,
+        "artists": [null],
+        "album": {
+          "albumId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "releaseYear": 0,
+          "description": "string",
+          "title": {
+            "english": "string",
+            "farsi": "string"
+          },
+          "imageUrl": "string",
+          "tracks": [null],
+          "genre": {
+            "genreId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "name": {
+              "english": "string",
+              "farsi": "string"
+            },
+            "imageUrl": "string"
+          },
+          "isLiked": true,
+          "isPodcast": true,
+          "specialsListOrder": 0
+        },
+        "hqUrl": "string",
+        "mqUrl": "string",
+        "lqUrl": "string",
+        "videoUrl": "string",
+        "genres": [
+          {
+            "genreId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "name": {
+              "english": "string",
+              "farsi": "string"
+            },
+            "imageUrl": "string"
+          }
+        ],
+        "isLiked": true,
+        "mustDownload": true
+      }
+    ],
+    "albums": [
+      {
+        "albumId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "releaseYear": 0,
+        "description": "string",
+        "title": {
+          "english": "string",
+          "farsi": "string"
+        },
+        "imageUrl": "string",
+        "tracks": [null],
+        "genre": {
+          "genreId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "name": {
+            "english": "string",
+            "farsi": "string"
+          },
+          "imageUrl": "string"
+        },
+        "isLiked": true,
+        "isPodcast": true,
+        "specialsListOrder": 0
+      }
+    ],
+    "isLiked": true,
+    "isBand": true,
+    "specialsListOrder": 0
+  }
+]

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from './Anchor.module.css';
 
@@ -9,9 +10,9 @@ const Anchor = (props) => {
   if (props.className === 'secondary') classNames.push(classes.secondary);
 
   return (
-    <a {...props} className={classNames.join(' ')}>
+    <Link {...props} className={classNames.join(' ')}>
       {props.children}
-    </a>
+    </Link>
   );
 };
 

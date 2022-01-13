@@ -13,11 +13,3 @@
   margin-left: -100px;
   padding: 20px 30px;
 }
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.contentsWrapper {
-  padding: 20px 10px;
-}

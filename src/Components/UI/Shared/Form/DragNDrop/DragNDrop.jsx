@@ -5,7 +5,7 @@ import classes from './DragNDrop.module.css';
 
 import Button from '../../Button/Button';
 
-const DragNDrop = ({ setFieldValue, imagePlaceholder }) => {
+const DragNDrop = ({ setFieldValue, imagePlaceholder, style }) => {
   const [files, setFiles] = useState([]);
 
   const dropzoneRef = useRef();
@@ -33,7 +33,7 @@ const DragNDrop = ({ setFieldValue, imagePlaceholder }) => {
   };
 
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} style={style}>
       <div {...getRootProps({ className: 'dropZone' })} ref={dropzoneRef}>
         <input {...getInputProps()} />
         <div className={classes.contentsWrapper}>

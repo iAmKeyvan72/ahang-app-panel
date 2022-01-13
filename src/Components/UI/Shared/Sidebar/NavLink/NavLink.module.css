@@ -1,0 +1,22 @@
+.container {
+  display: block;
+  margin: 10px;
+}
+.navButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  color: var(--background-400);
+  border-radius: 5px;
+  transition: background-color 0.3s ease-out;
+}
+.navButton:hover,
+.navButton.active {
+  background-color: var(--text-700);
+  color: var(--background-100);
+}
+.navButton span {
+  margin-left: 10px;
+}

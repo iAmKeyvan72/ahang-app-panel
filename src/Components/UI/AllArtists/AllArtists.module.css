@@ -1,21 +1,16 @@
-.formWrapper {
+.container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.formItem {
-  width: 45%;
-  padding: 10px;
-  flex-grow: 1;
-}
-
-.checkboxWrapper {
-  margin: 10px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 10px 20px;
 }
 .contentsWrapper {
   padding: 20px 10px;
