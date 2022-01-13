@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: var(--background-100);
+  border: 1px dashed var(--background-400);
+  border-radius: 5px;
+  padding: 10px;
+}
+.contentsWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.thumbnail {
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.contents {
+  color: var(--text-placeholder);
+}
+.contents p {
+  margin-bottom: 10px;
+}

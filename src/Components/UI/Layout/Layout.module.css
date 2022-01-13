@@ -1,0 +1,23 @@
+.container {
+  max-width: 1024px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mainWrapper {
+  background-color: var(--background-200);
+  border-radius: 10px;
+  width: 100%;
+  min-height: 50vh;
+  margin-left: -100px;
+  padding: 20px 30px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contentsWrapper {
+  padding: 20px 10px;
+}

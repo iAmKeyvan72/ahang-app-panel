@@ -1,0 +1,6 @@
+.inputTextStyle {
+  padding: 10px;
+  background-color: var(--background-100);
+  border: 1px solid var(--background-400);
+  border-radius: 5px;
+}

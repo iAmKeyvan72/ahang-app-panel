@@ -1,0 +1,19 @@
+.inputWithLabel {
+  display: flex;
+  flex-direction: column;
+}
+.inputWithLabel label {
+  margin-bottom: 5px;
+}
+.rtlSupport {
+  direction: rtl;
+}
+.rtlSupport i {
+  border-right: 0;
+  border-left: 1px solid var(--background-400);
+  margin: 0 0 0 10px !important;
+}
+.rtlSupport label,
+.rtlSupport input {
+  font-family: 'Vazir', sans-serif;
+}

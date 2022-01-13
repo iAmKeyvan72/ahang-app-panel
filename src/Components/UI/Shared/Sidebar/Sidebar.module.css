@@ -1,0 +1,40 @@
+.sidebar {
+  background-color: var(--text-900);
+  color: var(--background-400);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 10px;
+  width: 25%;
+  height: 75vh;
+  padding: 40px;
+}
+.navMainActions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navMainActions li {
+  display: block;
+  margin: 5px auto;
+  width: 100%;
+}
+.sidebar .navButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  color: var(--background-400);
+  border-radius: 5px;
+  transition: background-color 0.3s ease-out;
+}
+.sidebar .navButton:hover,
+.sidebar .navButton.activeNav {
+  background-color: var(--text-700);
+  color: var(--background-100);
+}
+.navButton svg {
+  margin-right: 10px;
+}

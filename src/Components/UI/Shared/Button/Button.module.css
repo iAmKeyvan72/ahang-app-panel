@@ -1,0 +1,25 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.primary {
+  background-color: var(--primary-500);
+  color: var(--background-100);
+}
+.primary:hover {
+  background-color: var(--primary-700);
+}
+.secondary {
+  color: var(--primary-500);
+  background-color: var(--background-200);
+}
+.secondary:hover {
+  background-color: var(--primary-500);
+  color: var(--background-100);
+}
