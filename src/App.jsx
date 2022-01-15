@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { AuthContextProvider } from './Context/AuthContext';
 import PrivateRoute from './Utils/PrivateRoute';
+
 import Layout from './Pages/Layout/Layout';
 import MainWrapper from './Pages/Layout/MainWrapper/MainWrapper';
-import NewArtist from './Pages/NewArtistPage/NewArtistPage';
 import ArchivePage from './Pages/ArchivePage/ArchivePage';
 import AuthenticationLayout from './Pages/Authentication/AuthenticationLayout';
 import Login from './Pages/Authentication/Login/Login';
 import Signup from './Pages/Authentication/Signup/Signup';
-import { AuthContextProvider } from './Context/AuthContext';
 import Logout from './Pages/Authentication/Logout/Logout';
-import NewTrackPage from './Pages/NewTrackPage/NewTrackPage';
+import AddNewItemLayout from './Pages/AddNewItem/AddNewItemLayout';
+import AddNewTrack from './Pages/AddNewItem/AddNewTrack/AddNewTrack';
+import AddNewArtist from './Pages/AddNewItem/AddNewArtist/AddNewArtist';
 
 function App() {
   return (
@@ -35,8 +37,6 @@ function App() {
                     />
                   }
                 />
-                <Route path="new" element={<NewArtist />} />
-                <Route path="edit/:id" element={<NewArtist />} />
                 <Route
                   path="page/:page"
                   element={
@@ -46,6 +46,10 @@ function App() {
                     />
                   }
                 />
+                <Route element={<AddNewItemLayout />}>
+                  <Route path="new" element={<AddNewArtist />} />
+                  <Route path="edit/:id" element={<AddNewArtist />} />
+                </Route>
               </Route>
               <Route path="track" element={<MainWrapper />}>
                 <Route
@@ -57,8 +61,6 @@ function App() {
                     />
                   }
                 />
-                <Route path="new" element={<NewTrackPage />} />
-                <Route path="edit/:id" element={<NewTrackPage />} />
                 <Route
                   path="page/:page"
                   element={
@@ -68,6 +70,10 @@ function App() {
                     />
                   }
                 />
+                <Route element={<AddNewItemLayout />}>
+                  <Route path="new" element={<AddNewTrack />} />
+                  <Route path="edit/:id" element={<AddNewTrack />} />
+                </Route>
               </Route>
             </Route>
           </Route>
