@@ -17,18 +17,20 @@ const InputTextWithIcon = ({ ...props }) => {
     icon = <Icon size={1} color="var(--text-placeholder)" path={props.icon} />;
   }
 
+  const errored = meta.touched && meta.error;
+
   return (
-    <div className={classes.inputWrapper}>
-      <i>{icon}</i>
-      <input
-        {...field}
-        {...props}
-        className={classes.inputTextStyle}
+    <div>
+      <div
+        className={`${classes.inputWrapper} ${
+          errored ? classes.inputErrored : ''
+        }`}
         style={props.style}
-      />
-      {meta.touched && meta.error ? (
-        <div className={classes.error}>{meta.error}</div>
-      ) : null}
+      >
+        <i>{icon}</i>
+        <input {...field} {...props} className={classes.inputTextStyle} />
+      </div>
+      {errored ? <div className={classes.error}>{meta.error}</div> : null}
     </div>
   );
 };

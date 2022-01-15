@@ -1,19 +1,26 @@
-import config from '../../../config.json';
+import config from '../../config.json';
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Formik, Field, Form } from 'formik';
 import Icon from '@mdi/react';
 import { mdiArrowLeft, mdiWeb } from '@mdi/js';
 
-import classes from './NewArtist.module.css';
-import Button from '../Shared/Button/Button';
-import Anchor from '../Shared/Anchor/Anchor';
-import InputTextWithLabelAndIcon from '../Shared/Form/Inputs/InputTextWithLabelAndIcon/InputTextWithLabelAndIcon';
-import DragNDrop from '../Shared/Form/DragNDrop/DragNDrop';
-import MultiSelect from '../Shared/Form/MultiSelect/MultiSelect';
-import TextAreaWithLabelAndIcon from '../Shared/Form/Inputs/TextAreaWithLabelAndIcon/TextAreaWithLabelAndIcon';
+import classes from './NewArtistPage.module.css';
 
-const NewArtist = () => {
+import Button from '../../Components/UI/Shared/Button/Button';
+import Anchor from '../../Components/UI/Shared/Anchor/Anchor';
+import InputTextWithLabelAndIcon from '../../Components/UI/Shared/Form/Inputs/InputTextWithLabelAndIcon/InputTextWithLabelAndIcon';
+import DragNDrop from '../../Components/UI/Shared/Form/DragNDrop/DragNDrop';
+import MultiSelect from '../../Components/UI/Shared/Form/MultiSelect/MultiSelect';
+import TextAreaWithLabelAndIcon from '../../Components/UI/Shared/Form/Inputs/TextAreaWithLabelAndIcon/TextAreaWithLabelAndIcon';
+
+import useRequests from '../../hooks/useRequests';
+
+const NewArtistPage = () => {
+  const { insertRecord } = useRequests();
+  const navigate = useNavigate();
+
   return (
     <div className={classes.contentsWrapper}>
       <div className={classes.header}>
@@ -25,8 +32,8 @@ const NewArtist = () => {
 
       <Formik
         initialValues={{
-          enName: '',
-          faName: '',
+          nameEnglish: '',
+          nameFarsi: '',
           isIllegal: false,
           isBand: false,
           bandArtists: [],
@@ -40,8 +47,21 @@ const NewArtist = () => {
           farsiDescription: '',
         }}
         onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 2000));
-          alert(JSON.stringify(values, null, 10));
+          const convertedValues = {
+            name: {
+              english: values.nameEnglish,
+              farsi: values.nameFarsi,
+            },
+            image: {
+              rawImage: values.imageUrl,
+            },
+            description: values.englishDescription,
+            isBand: values.isBand,
+          };
+
+          const response = await insertRecord(convertedValues);
+          console.log(response.data);
+          navigate('/artists');
         }}
       >
         {(props) => (
@@ -49,8 +69,8 @@ const NewArtist = () => {
             <div className={classes.formItem}>
               <InputTextWithLabelAndIcon
                 label="Artist's name (english)"
-                id="enName"
-                name="enName"
+                id="nameEnglish"
+                name="nameEnglish"
                 placeholder="Artist's name in english"
                 icon="en"
               />
@@ -58,8 +78,8 @@ const NewArtist = () => {
             <div className={classes.formItem}>
               <InputTextWithLabelAndIcon
                 label="نام خواننده (فارسی)"
-                id="faName"
-                name="faName"
+                id="nameFarsi"
+                name="nameFarsi"
                 placeholder="نام خواننده به فارسی"
                 icon="fa"
                 direction="rtl"
@@ -88,6 +108,7 @@ const NewArtist = () => {
                   id="artists"
                   value={props.values.artists}
                   selectArrName="artists"
+                  endpoint={process.env.REACT_APP_ARTISTS}
                 />
               )}
             </div>
@@ -144,4 +165,4 @@ const NewArtist = () => {
   );
 };
 
-export default NewArtist;
+export default NewArtistPage;

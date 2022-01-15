@@ -10,6 +10,7 @@ const InputTextWithLabelAndIcon = ({
   placeholder,
   icon,
   label,
+  style,
   direction,
 }) => {
   return (
@@ -17,6 +18,7 @@ const InputTextWithLabelAndIcon = ({
       className={`${classes.inputWithLabel} ${
         direction === 'rtl' ? classes.rtlSupport : ''
       }`}
+      style={style}
     >
       <label htmlFor={id}>{label}</label>
       <InputTextWithIcon

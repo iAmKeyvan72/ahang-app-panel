@@ -8,6 +8,10 @@
   transition: all 0.3s ease-out;
   cursor: pointer;
 }
+.btn:disabled {
+  background-color: var(--text-400) !important;
+  color: var(--text-placeholder) !important;
+}
 .primary {
   background-color: var(--primary-500);
   color: var(--background-100);
@@ -22,4 +26,7 @@
 .secondary:hover {
   background-color: var(--primary-500);
   color: var(--background-100);
+}
+.center {
+  justify-content: center;
 }

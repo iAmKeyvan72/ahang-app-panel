@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 import classes from './Layout.module.css';
 
-import Sidebar from '../UI/Shared/Sidebar/Sidebar';
+import Sidebar from '../../Components/UI/Shared/Sidebar/Sidebar';
 
 const Layout = (props) => {
   return (

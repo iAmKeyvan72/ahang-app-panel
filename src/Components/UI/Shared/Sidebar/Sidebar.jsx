@@ -11,32 +11,33 @@ import {
 } from '@mdi/js';
 
 import classes from './Sidebar.module.css';
+
 import SidebarLink from './NavLink/NavLink';
 
-const Sidebar = (props) => {
+const Sidebar = () => {
   return (
     <div className={classes.sidebar}>
       <div className={classes.navMainActions}>
         <SidebarLink
-          to={'/tracks'}
+          to={'/track'}
           title="Tracks"
           icon={mdiMusicBoxMultipleOutline}
           activeIcon={mdiMusicBoxMultiple}
         />
         <SidebarLink
-          to={'/playlists'}
+          to={'/playlist'}
           title="Playlists"
           icon={mdiPlaylistMusicOutline}
           activeIcon={mdiPlaylistMusic}
         />
         <SidebarLink
-          to={'/albums'}
+          to={'/album'}
           title="Albums"
           icon={mdiAlbum}
           activeIcon={mdiAlbum}
         />
         <SidebarLink
-          to={'/artists'}
+          to={'/artist'}
           title="Artists"
           icon={mdiAccountMusicOutline}
           activeIcon={mdiAccountMusic}

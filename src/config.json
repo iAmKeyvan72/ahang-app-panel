@@ -1,5 +1,8 @@
 {
   "placeholders": {
     "artists": "/assets/images/imagePlaceholders/artistsPlaceholder.png"
+  },
+  "pagination": {
+    "limit": 3
   }
 }

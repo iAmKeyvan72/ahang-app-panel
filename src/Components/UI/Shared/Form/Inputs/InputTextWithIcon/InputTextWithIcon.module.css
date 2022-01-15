@@ -18,6 +18,14 @@
   border: none;
   background-color: transparent;
   width: 100%;
+  margin: 0 !important;
+}
+.inputErrored {
+  border-color: var(--error);
+}
+.error {
+  margin-top: 5px;
+  color: var(--error);
 }
 .flag {
   width: 1.5rem;

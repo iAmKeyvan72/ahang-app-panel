@@ -27,3 +27,6 @@
 .actionButtonsContainer button {
   padding: 5px 10px;
 }
+.circleImage {
+  border-radius: 50%;
+}
